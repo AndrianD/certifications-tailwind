@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-// Définition du type pour les URL d'images
-type ImageUrl = string
-
-// Définition du type pour le tableau certifs
 
 const showModal = ref(false)
 const selectedImage = ref<string>('')
@@ -18,7 +14,7 @@ const certifs = ref<string[]>([
   'web-api.png',
 ])
 
-function openModal(image: ImageUrl) {
+function openModal(image: string) {
   selectedImage.value = `https://github.com/AndrianD/certifications/blob/main/${image}?raw=true&auto=format&q=75&fit=crop&w=600`
   showModal.value = true
 }
